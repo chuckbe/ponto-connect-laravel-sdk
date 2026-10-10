@@ -2,7 +2,18 @@
 
 namespace PontoConnect\Api;
 
+use PontoConnect\Api\Resources\AccountResource;
+use PontoConnect\Api\Resources\FinancialInstitutionResource;
+use PontoConnect\Api\Resources\IntegrationAccountResource;
+use PontoConnect\Api\Resources\IntegrationResource;
 use PontoConnect\Api\Resources\OAuthResource;
+use PontoConnect\Api\Resources\OnboardingDetailsResource;
+use PontoConnect\Api\Resources\PendingTransactionResource;
+use PontoConnect\Api\Resources\ReauthorizationRequestResource;
+use PontoConnect\Api\Resources\SynchronizationResource;
+use PontoConnect\Api\Resources\TransactionResource;
+use PontoConnect\Api\Resources\UsageResource;
+use PontoConnect\Api\Resources\UserInfoResource;
 use PontoConnect\Configuration;
 use PontoConnect\Exceptions\PontoConnectException;
 use Saloon\Http\Auth\TokenAuthenticator;
@@ -25,12 +36,45 @@ class PontoConnectApiClient extends Connector
 
     public OAuthResource $oauth;
 
+    public UserInfoResource $userInfo;
+
+    public OnboardingDetailsResource $onboardingDetails;
+
+    public FinancialInstitutionResource $financialInstitution;
+
+    public AccountResource $account;
+
+    public TransactionResource $transaction;
+
+    public PendingTransactionResource $pendingTransaction;
+
+    public SynchronizationResource $synchronization;
+
+    public ReauthorizationRequestResource $reauthorizationRequest;
+
+    public IntegrationAccountResource $integrationAccount;
+
+    public UsageResource $usage;
+
+    public IntegrationResource $integration;
+
     public function __construct(
         protected Configuration $configuration,
         #[SensitiveParameter]
         protected ?string $accessToken = null,
     ) {
         $this->oauth = new OAuthResource($this);
+        $this->userInfo = new UserInfoResource($this);
+        $this->onboardingDetails = new OnboardingDetailsResource($this);
+        $this->financialInstitution = new FinancialInstitutionResource($this);
+        $this->account = new AccountResource($this);
+        $this->transaction = new TransactionResource($this);
+        $this->pendingTransaction = new PendingTransactionResource($this);
+        $this->synchronization = new SynchronizationResource($this);
+        $this->reauthorizationRequest = new ReauthorizationRequestResource($this);
+        $this->integrationAccount = new IntegrationAccountResource($this);
+        $this->usage = new UsageResource($this);
+        $this->integration = new IntegrationResource($this);
     }
 
     public function configuration(): Configuration

@@ -1,0 +1,10 @@
+{
+    "data": {
+        "attributes": {},
+        "id": "8a1bb459-e1de-47dc-8ffb-0925d8e341f3",
+        "links": {
+            "redirect": "https://authorize.acceptance.myponto.net/organizations/3953d4ab-7ec4-4c0b-8b91-4be8626c0946/sandbox/integrations/e1848b9c-9c72-431e-b0c0-410b0e579166/accounts/5a8820b5-87c5-4d8d-b0f1-32e710b0bd9b/reauthorization-requests/8a1bb459-e1de-47dc-8ffb-0925d8e341f3"
+        },
+        "type": "reauthorizationRequest"
+    }
+}

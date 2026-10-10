@@ -1,0 +1,64 @@
+{
+    "data": {
+        "attributes": {
+            "deprecated": false,
+            "description": "Natus magnam aliquid.",
+            "reference": "FR634651777754ERBI0HJTW2U88",
+            "product": "Current account",
+            "currency": "EUR",
+            "authorizationExpirationExpectedAt": "2025-07-17T14:14:26.569Z",
+            "currentBalance": -465.33,
+            "subtype": "checking",
+            "availableBalance": -465.33,
+            "referenceType": "IBAN",
+            "holderName": "Spencer Nikolaus",
+            "internalReference": "8e49fac4-7eb1-41d2-8c8c-30adc94c56fb",
+            "authorizedAt": "2025-04-18T14:14:26.569Z",
+            "availableBalanceChangedAt": "2025-04-22T13:32:00.373Z",
+            "availableBalanceReferenceDate": "2025-04-22T14:30:32.000Z",
+            "availableBalanceVariationObservedAt": "2025-04-22T13:32:00.380Z",
+            "currentBalanceChangedAt": "2025-04-22T13:32:00.373Z",
+            "currentBalanceReferenceDate": "2025-04-22T14:30:32.000Z",
+            "currentBalanceVariationObservedAt": "2025-04-22T13:32:00.380Z"
+        },
+        "id": "5a8820b5-87c5-4d8d-b0f1-32e710b0bd9b",
+        "meta": {
+            "latestSynchronization": {
+                "attributes": {
+                    "createdAt": "2025-04-22T13:31:59.969Z",
+                    "customerOnline": true,
+                    "errors": [],
+                    "resourceId": "5a8820b5-87c5-4d8d-b0f1-32e710b0bd9b",
+                    "resourceType": "account",
+                    "status": "success",
+                    "subtype": "accountDetails",
+                    "updatedAt": "2025-04-22T13:32:00.481Z"
+                },
+                "id": "68e0e4d4-499b-437a-a058-9bed2c6987b0",
+                "type": "synchronization"
+            },
+            "synchronizedAt": "2025-04-22T13:32:00.481Z",
+            "availability": "available"
+        },
+        "type": "account",
+        "relationships": {
+            "financialInstitution": {
+                "data": {
+                    "id": "41ed5259-9e07-43a7-b8c2-3854adef2067",
+                    "type": "financialInstitution"
+                },
+                "links": {
+                    "related": "https://api.ibanity.com/ponto-connect/financial-institutions/41ed5259-9e07-43a7-b8c2-3854adef2067"
+                }
+            },
+            "transactions": {
+                "links": {
+                    "meta": {
+                        "type": "transaction"
+                    },
+                    "related": "https://api.ibanity.com/ponto-connect/accounts/5a8820b5-87c5-4d8d-b0f1-32e710b0bd9b/transactions"
+                }
+            }
+        }
+    }
+}

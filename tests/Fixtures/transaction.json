@@ -1,0 +1,42 @@
+{
+    "data": {
+        "attributes": {
+            "description": "Big Cotton JACKET",
+            "currency": "EUR",
+            "digest": "fa026f630b82f305a66d170245be6069dd8c846ee610a7b842ca3ef81d3c6165",
+            "mandateId": "234",
+            "amount": -85,
+            "createdAt": "2025-04-22T13:32:21.513Z",
+            "remittanceInformation": "BIGGER NEW JACKET",
+            "remittanceInformationType": "unstructured",
+            "endToEndId": "76061f262404431bac46c344482f0fea",
+            "updatedAt": "2025-04-22T13:32:43.158Z",
+            "fee": null,
+            "additionalInformation": "Online payment on bestmarket.com",
+            "bankTransactionCode": "PMNT-IRCT-ESCT",
+            "cardReference": null,
+            "cardReferenceType": null,
+            "counterpartName": null,
+            "counterpartReference": "BE36732915527881",
+            "creditorId": "123498765421",
+            "executionDate": "2025-04-19T13:32:00.000Z",
+            "proprietaryBankTransactionCode": "12345",
+            "purposeCode": "CASH",
+            "valueDate": "2025-04-19T13:32:00.000Z",
+            "internalReference": "d8415e8d-87a8-4b34-80e1-0c4fbf687e36"
+        },
+        "id": "0365739f-9238-40ba-839b-f39f1f11890a",
+        "type": "transaction",
+        "relationships": {
+            "account": {
+                "data": {
+                    "id": "5a8820b5-87c5-4d8d-b0f1-32e710b0bd9b",
+                    "type": "account"
+                },
+                "links": {
+                    "related": "https://api.ibanity.com/ponto-connect/accounts/5a8820b5-87c5-4d8d-b0f1-32e710b0bd9b"
+                }
+            }
+        }
+    }
+}

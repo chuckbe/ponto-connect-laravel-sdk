@@ -1,0 +1,70 @@
+{
+    "data": [
+        {
+            "attributes": {
+                "description": "Big Cotton JACKET",
+                "currency": "EUR",
+                "digest": "9bca3ae5049af3d84aed12355aa671576d46c323b3c7525a0c05a7cb42a9b83f",
+                "mandateId": "234",
+                "amount": -21.24,
+                "createdAt": "2025-04-22T13:30:52.703Z",
+                "remittanceInformation": "BIGGER NEW JACKET",
+                "remittanceInformationType": "unstructured",
+                "endToEndId": "58875880999b47fb998a2ac62c31156f",
+                "updatedAt": "2025-04-22T13:31:14.568Z",
+                "fee": null,
+                "additionalInformation": "Online payment on bestmarket.com",
+                "bankTransactionCode": "PMNT-IRCT-ESCT",
+                "cardReference": null,
+                "cardReferenceType": null,
+                "counterpartName": null,
+                "counterpartReference": "BE58732784160579",
+                "creditorId": "123498765421",
+                "executionDate": "2025-04-22T14:30:32.000Z",
+                "proprietaryBankTransactionCode": "12345",
+                "purposeCode": "CASH",
+                "valueDate": "2025-04-21T13:30:32.000Z",
+                "internalReference": "2468a217-d68d-4a57-8a94-5803ef5eb35e"
+            },
+            "id": "ea0ba58d-5542-42b3-9a4e-08f00405a2ff",
+            "type": "transaction",
+            "relationships": {
+                "account": {
+                    "data": {
+                        "id": "5a8820b5-87c5-4d8d-b0f1-32e710b0bd9b",
+                        "type": "account"
+                    },
+                    "links": {
+                        "related": "https://api.ibanity.com/ponto-connect/accounts/5a8820b5-87c5-4d8d-b0f1-32e710b0bd9b"
+                    }
+                }
+            }
+        }
+    ],
+    "links": {
+        "first": "https://api.ibanity.com/ponto-connect/accounts/5a8820b5-87c5-4d8d-b0f1-32e710b0bd9b/pending-transactions?page[limit]=1",
+        "next": "https://api.ibanity.com/ponto-connect/accounts/5a8820b5-87c5-4d8d-b0f1-32e710b0bd9b/pending-transactions?page[after]=ea0ba58d-5542-42b3-9a4e-08f00405a2ff&page[limit]=1"
+    },
+    "meta": {
+        "paging": {
+            "after": "ea0ba58d-5542-42b3-9a4e-08f00405a2ff",
+            "limit": 1,
+            "before": null
+        },
+        "latestSynchronization": {
+            "attributes": {
+                "createdAt": "2025-04-22T13:33:27.728Z",
+                "customerOnline": true,
+                "errors": [],
+                "resourceId": "5a8820b5-87c5-4d8d-b0f1-32e710b0bd9b",
+                "resourceType": "account",
+                "status": "success",
+                "subtype": "accountTransactionsWithUnsettled",
+                "updatedAt": "2025-04-22T13:33:28.130Z"
+            },
+            "id": "43a16d81-53a1-4f26-93e9-3b0e8a4007d0",
+            "type": "synchronization"
+        },
+        "synchronizedAt": "2025-04-22T13:33:28.130Z"
+    }
+}

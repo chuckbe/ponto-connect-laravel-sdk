@@ -1,0 +1,26 @@
+{
+    "data": {
+        "attributes": {
+            "addressCity": "Brussels",
+            "addressCountry": "BE",
+            "addressPostalCode": "1000",
+            "addressStreetAddress": "123 Main St",
+            "enterpriseNumber": "0999999999",
+            "organizationType": "business",
+            "vatNumber": "BE0999999999",
+            "phoneNumber": "+32484000000",
+            "email": "jsmith@example.com",
+            "firstName": "Jo",
+            "lastName": "Smith",
+            "partnerReference": "partner-reference",
+            "automaticSubmissionOnCompletedForms": true,
+            "initialFinancialInstitutionId": "69f8d721-0c12-4a12-8496-943e2dc5a927",
+            "organizationName": "Smith Ltd",
+            "preferredOtpMethod": null,
+            "requestedOrganisationId": "69f8d721-0c12-4a12-8496-943e2dc5a927",
+            "skipFinancialInstitutionSelection": false
+        },
+        "id": "f56b519d-14d6-4ce9-adbf-2fce805318c6",
+        "type": "onboardingDetails"
+    }
+}

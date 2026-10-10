@@ -1,0 +1,9 @@
+{
+    "name": "Bytecard",
+    "sub": "3953d4ab-7ec4-4c0b-8b91-4be8626c0946",
+    "paymentRequestsActivated": true,
+    "paymentsActivated": true,
+    "paymentsActivationRequested": true,
+    "paymentRequestsActivationRequested": true,
+    "onboardingComplete": true
+}

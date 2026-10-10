@@ -1,0 +1,48 @@
+{
+    "data": [
+        {
+            "attributes": {
+                "name": "MetaBank",
+                "status": "stable",
+                "deprecated": false,
+                "country": "BE",
+                "logoUrl": "https://ibanity-production-financial-institution-assets.s3.eu-central-1.amazonaws.com/sandbox.svg",
+                "bulkPaymentsEnabled": true,
+                "paymentsEnabled": true,
+                "pendingTransactionsAvailable": true,
+                "bic": null,
+                "bulkPaymentsProductTypes": [
+                    "sepaCreditTransfer"
+                ],
+                "futureDatedPaymentsAllowed": true,
+                "maintenanceFrom": null,
+                "maintenanceTo": null,
+                "maintenanceType": null,
+                "paymentsProductTypes": [
+                    "sepaCreditTransfer"
+                ],
+                "periodicPaymentsEnabled": true,
+                "periodicPaymentsProductTypes": [
+                    "sepaCreditTransfer"
+                ],
+                "primaryColor": null,
+                "secondaryColor": null,
+                "sharedBrandName": null,
+                "sharedBrandReference": null,
+                "timeZone": "Europe/Brussels"
+            },
+            "id": "75fc04e8-acc3-428b-9e78-8c5a8a8712c3",
+            "type": "financialInstitution"
+        }
+    ],
+    "links": {
+        "first": "https://api.ibanity.com/ponto-connect/financial-institutions?page[limit]=1",
+        "next": "https://api.ibanity.com/ponto-connect/financial-institutions?page[after]=75fc04e8-acc3-428b-9e78-8c5a8a8712c3&page[limit]=1"
+    },
+    "meta": {
+        "paging": {
+            "after": "75fc04e8-acc3-428b-9e78-8c5a8a8712c3",
+            "limit": 1
+        }
+    }
+}

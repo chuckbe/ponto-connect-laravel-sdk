@@ -1,0 +1,55 @@
+{
+    "data": [
+        {
+            "attributes": {
+                "description": "Big Cotton JACKET",
+                "currency": "EUR",
+                "digest": "02ee69e53e0769f24d5fcb777980698031a0a0ed86509df017f92d7e2f8e88cb",
+                "mandateId": "234",
+                "amount": -85,
+                "createdAt": "2025-04-22T13:33:06.212Z",
+                "remittanceInformation": "BIGGER NEW JACKET",
+                "remittanceInformationType": "unstructured",
+                "endToEndId": "8db904df293945b49981cb6f3ca084b5",
+                "updatedAt": "2025-04-22T13:33:28.043Z",
+                "fee": null,
+                "additionalInformation": "Online payment on bestmarket.com",
+                "bankTransactionCode": "PMNT-IRCT-ESCT",
+                "cardReference": null,
+                "cardReferenceType": null,
+                "counterpartName": null,
+                "counterpartReference": "BE91732514412976",
+                "creditorId": "123498765421",
+                "executionDate": "2025-04-19T13:32:45.000Z",
+                "proprietaryBankTransactionCode": "12345",
+                "purposeCode": "CASH",
+                "valueDate": "2025-04-19T13:32:45.000Z",
+                "internalReference": "f4fbe61b-9836-45c4-bc92-055b07d5ce43"
+            },
+            "id": "36ebdb8b-6166-465d-a250-028e0cb94efa",
+            "type": "transaction",
+            "relationships": {
+                "account": {
+                    "data": {
+                        "id": "5a8820b5-87c5-4d8d-b0f1-32e710b0bd9b",
+                        "type": "account"
+                    },
+                    "links": {
+                        "related": "https://api.ibanity.com/ponto-connect/accounts/5a8820b5-87c5-4d8d-b0f1-32e710b0bd9b"
+                    }
+                }
+            }
+        }
+    ],
+    "links": {
+        "first": "https://api.ibanity.com/ponto-connect/synchronizations/43a16d81-53a1-4f26-93e9-3b0e8a4007d0/updated-transactions?page[limit]=1",
+        "next": "https://api.ibanity.com/ponto-connect/synchronizations/43a16d81-53a1-4f26-93e9-3b0e8a4007d0/updated-transactions?page[after]=36ebdb8b-6166-465d-a250-028e0cb94efa&page[limit]=1"
+    },
+    "meta": {
+        "paging": {
+            "after": "36ebdb8b-6166-465d-a250-028e0cb94efa",
+            "limit": 1,
+            "before": null
+        }
+    }
+}

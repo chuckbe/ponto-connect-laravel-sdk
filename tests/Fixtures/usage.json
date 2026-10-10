@@ -1,0 +1,22 @@
+{
+    "data": {
+        "attributes": {
+            "accountCount": 0,
+            "totalAccounts": 0,
+            "bulkPaymentBundleCount": 0,
+            "bulkPaymentCount": 0,
+            "paymentAccountCount": 0,
+            "paymentCount": 0
+        },
+        "id": "2020-07",
+        "type": "usage",
+        "relationships": {
+            "organization": {
+                "data": {
+                    "id": "3953d4ab-7ec4-4c0b-8b91-4be8626c0946",
+                    "type": "organization"
+                }
+            }
+        }
+    }
+}

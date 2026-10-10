@@ -1,0 +1,49 @@
+{
+    "data": [
+        {
+            "attributes": {
+                "createdAt": "2024-07-01T09:27:00.741552Z",
+                "lastAccessedAt": null,
+                "partnerReference": null
+            },
+            "id": "10fd3e13-4356-4c43-98c1-e7d5543aeee8",
+            "type": "integrationAccount",
+            "relationships": {
+                "organization": {
+                    "data": {
+                        "id": "37835bf6-c1e0-4dcb-aaba-7e244c756e10",
+                        "type": "organization"
+                    }
+                },
+                "financialInstitution": {
+                    "data": {
+                        "id": "41ed5259-9e07-43a7-b8c2-3854adef2067",
+                        "type": "financialInstitution"
+                    },
+                    "links": {
+                        "related": "https://api.ibanity.com/ponto-connect/financial-institutions/41ed5259-9e07-43a7-b8c2-3854adef2067"
+                    }
+                },
+                "account": {
+                    "data": {
+                        "id": "b0bb95ff-5b95-441f-a864-0fb0ccea955a",
+                        "type": "account"
+                    },
+                    "links": {
+                        "related": "https://api.ibanity.com/ponto-connect/accounts/b0bb95ff-5b95-441f-a864-0fb0ccea955a"
+                    }
+                }
+            }
+        }
+    ],
+    "links": {
+        "first": "https://api.ibanity.com/ponto-connect/integration-accounts?page[limit]=1",
+        "next": "https://api.ibanity.com/ponto-connect/integration-accounts?page[after]=10fd3e13-4356-4c43-98c1-e7d5543aeee8&page[limit]=1"
+    },
+    "meta": {
+        "paging": {
+            "after": "10fd3e13-4356-4c43-98c1-e7d5543aeee8",
+            "limit": 1
+        }
+    }
+}

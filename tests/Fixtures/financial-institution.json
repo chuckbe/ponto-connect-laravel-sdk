@@ -1,0 +1,36 @@
+{
+    "data": {
+        "attributes": {
+            "name": "Gringotts Bank",
+            "status": "stable",
+            "deprecated": false,
+            "country": "BE",
+            "logoUrl": "https://ibanity-production-financial-institution-assets.s3.eu-central-1.amazonaws.com/sandbox.svg",
+            "bulkPaymentsEnabled": true,
+            "paymentsEnabled": true,
+            "pendingTransactionsAvailable": true,
+            "bic": "NBBEBEBB203",
+            "bulkPaymentsProductTypes": [
+                "sepaCreditTransfer"
+            ],
+            "futureDatedPaymentsAllowed": true,
+            "maintenanceFrom": null,
+            "maintenanceTo": null,
+            "maintenanceType": null,
+            "paymentsProductTypes": [
+                "sepaCreditTransfer"
+            ],
+            "periodicPaymentsEnabled": true,
+            "periodicPaymentsProductTypes": [
+                "sepaCreditTransfer"
+            ],
+            "primaryColor": "#7d39ff",
+            "secondaryColor": "#3DF2C2",
+            "sharedBrandName": null,
+            "sharedBrandReference": null,
+            "timeZone": "Europe/Brussels"
+        },
+        "id": "41ed5259-9e07-43a7-b8c2-3854adef2067",
+        "type": "financialInstitution"
+    }
+}

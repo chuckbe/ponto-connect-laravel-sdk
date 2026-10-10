@@ -1,0 +1,42 @@
+{
+    "data": {
+        "attributes": {
+            "description": "Nice cap",
+            "currency": "EUR",
+            "digest": "8754f9df2ee26b71714f4a68191742fdb10ea54725e5ca278cec6043217b0e54",
+            "mandateId": "234",
+            "amount": -99.29,
+            "createdAt": "2025-04-22T13:33:50.688Z",
+            "remittanceInformation": "NEW CAP",
+            "remittanceInformationType": "unstructured",
+            "endToEndId": "df20b2f900e9457b90ad9802bdae043f",
+            "updatedAt": "2025-04-22T13:33:50.688Z",
+            "fee": null,
+            "additionalInformation": "Online payment on bestmarket.com",
+            "bankTransactionCode": "PMNT-IRCT-ESCT",
+            "cardReference": null,
+            "cardReferenceType": null,
+            "counterpartName": null,
+            "counterpartReference": "BE64732503304052",
+            "creditorId": "123498765421",
+            "executionDate": "2025-04-22T14:33:30.000Z",
+            "proprietaryBankTransactionCode": "12267",
+            "purposeCode": "CASH",
+            "valueDate": "2025-04-21T13:33:29.000Z",
+            "internalReference": "299d04c7-5ed5-4723-b583-7d4f199d8420"
+        },
+        "id": "bac0f85d-f1d8-4e15-b46d-fa305ff46848",
+        "type": "transaction",
+        "relationships": {
+            "account": {
+                "data": {
+                    "id": "5a8820b5-87c5-4d8d-b0f1-32e710b0bd9b",
+                    "type": "account"
+                },
+                "links": {
+                    "related": "https://api.ibanity.com/ponto-connect/accounts/5a8820b5-87c5-4d8d-b0f1-32e710b0bd9b"
+                }
+            }
+        }
+    }
+}
