@@ -13,3 +13,9 @@ Thumbs.db
 *.swp
 *.swo
 .env
+
+# Ponto certificates and keys
+*.pem
+*.pfx
+*.p12
+*.key
