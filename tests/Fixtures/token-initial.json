@@ -1,0 +1,7 @@
+{
+    "access_token": "lG4ImlCW8rsg9rKyPIybO3wY0QXV8qh-qqDVL65djrs.mf_abHC4LOGgfQInZBPpKb6RyRBSkdB5MGSbh-QPL8U",
+    "expires_in": 1800,
+    "refresh_token": "qEn4LR6UCk829VVqXoMf-vEQr6VoK6h0GusdgZRtDSc.YeT76p5iPj1gjsC6dZrUPa3qOfthSnQjwHaJHv3rOMc",
+    "scope": "offline_access ai pi name",
+    "token_type": "bearer"
+}
