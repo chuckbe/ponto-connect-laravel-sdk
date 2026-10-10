@@ -1,0 +1,29 @@
+{
+    "data": {
+        "attributes": {
+            "description": "Small Cotton Shoes",
+            "currency": "EUR",
+            "mandateId": "234",
+            "amount": -85,
+            "createdAt": "2025-04-22T13:31:58.734937Z",
+            "remittanceInformation": "NEW SHOES",
+            "remittanceInformationType": "unstructured",
+            "endToEndId": "ref.243435343",
+            "updatedAt": "2025-04-22T13:31:58.922185Z",
+            "fee": null,
+            "additionalInformation": "Online payment on fake-tpp.com",
+            "bankTransactionCode": "PMNT-IRCT-ESCT",
+            "cardReference": null,
+            "cardReferenceType": null,
+            "counterpartName": "Otro Bank",
+            "counterpartReference": "BE54732421915800",
+            "creditorId": "123498765421",
+            "executionDate": "2025-04-19T13:31:58Z",
+            "proprietaryBankTransactionCode": "12267",
+            "purposeCode": "CASH",
+            "valueDate": "2025-04-19T13:31:58Z"
+        },
+        "id": "ac966e44-05ea-4259-82f7-01949e6341c7",
+        "type": "financialInstitutionTransaction"
+    }
+}

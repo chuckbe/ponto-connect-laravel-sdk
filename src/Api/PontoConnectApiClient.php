@@ -10,6 +10,7 @@ use PontoConnect\Api\Resources\OAuthResource;
 use PontoConnect\Api\Resources\OnboardingDetailsResource;
 use PontoConnect\Api\Resources\PendingTransactionResource;
 use PontoConnect\Api\Resources\ReauthorizationRequestResource;
+use PontoConnect\Api\Resources\SandboxResource;
 use PontoConnect\Api\Resources\SynchronizationResource;
 use PontoConnect\Api\Resources\TransactionResource;
 use PontoConnect\Api\Resources\UsageResource;
@@ -58,6 +59,8 @@ class PontoConnectApiClient extends Connector
 
     public IntegrationResource $integration;
 
+    public SandboxResource $sandbox;
+
     public function __construct(
         protected Configuration $configuration,
         #[SensitiveParameter]
@@ -75,6 +78,7 @@ class PontoConnectApiClient extends Connector
         $this->integrationAccount = new IntegrationAccountResource($this);
         $this->usage = new UsageResource($this);
         $this->integration = new IntegrationResource($this);
+        $this->sandbox = new SandboxResource($this);
     }
 
     public function configuration(): Configuration

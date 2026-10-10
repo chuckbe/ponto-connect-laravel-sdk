@@ -1,0 +1,33 @@
+{
+    "data": [
+        {
+            "attributes": {
+                "description": "Natus magnam aliquid.",
+                "reference": "FR634651777754ERBI0HJTW2U88",
+                "product": "Current account",
+                "currency": "EUR",
+                "currentBalance": -464.75,
+                "subtype": "checking",
+                "availableBalance": -464.75,
+                "referenceType": "IBAN",
+                "holderName": "Spencer Nikolaus",
+                "availableBalanceChangedAt": "2025-04-22T13:31:57.154510Z",
+                "availableBalanceReferenceDate": "2025-04-22T14:30:32Z",
+                "currentBalanceChangedAt": "2025-04-22T13:31:57.154499Z",
+                "currentBalanceReferenceDate": "2025-04-22T14:30:32Z"
+            },
+            "id": "8e49fac4-7eb1-41d2-8c8c-30adc94c56fb",
+            "type": "financialInstitutionAccount"
+        }
+    ],
+    "links": {
+        "first": "https://api.ibanity.com/ponto-connect/sandbox/financial-institutions/41ed5259-9e07-43a7-b8c2-3854adef2067/financial-institution-accounts?page[limit]=1",
+        "next": "https://api.ibanity.com/ponto-connect/sandbox/financial-institutions/41ed5259-9e07-43a7-b8c2-3854adef2067/financial-institution-accounts?page[after]=8e49fac4-7eb1-41d2-8c8c-30adc94c56fb&page[limit]=1"
+    },
+    "meta": {
+        "paging": {
+            "after": "8e49fac4-7eb1-41d2-8c8c-30adc94c56fb",
+            "limit": 1
+        }
+    }
+}

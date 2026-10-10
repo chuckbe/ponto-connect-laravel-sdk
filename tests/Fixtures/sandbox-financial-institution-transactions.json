@@ -1,0 +1,41 @@
+{
+    "data": [
+        {
+            "attributes": {
+                "description": "Big Cotton JACKET",
+                "currency": "EUR",
+                "mandateId": null,
+                "amount": -21.24,
+                "createdAt": "2025-04-22T13:30:32.145064Z",
+                "remittanceInformation": "BIGGER NEW JACKET",
+                "remittanceInformationType": "unstructured",
+                "endToEndId": null,
+                "updatedAt": "2025-04-22T13:30:53.902227Z",
+                "fee": null,
+                "additionalInformation": null,
+                "bankTransactionCode": null,
+                "cardReference": null,
+                "cardReferenceType": null,
+                "counterpartName": null,
+                "counterpartReference": "BE58732784160579",
+                "creditorId": null,
+                "executionDate": "2025-04-22T14:30:32Z",
+                "proprietaryBankTransactionCode": "12345",
+                "purposeCode": null,
+                "valueDate": "2025-04-21T13:30:32Z"
+            },
+            "id": "2468a217-d68d-4a57-8a94-5803ef5eb35e",
+            "type": "financialInstitutionTransaction"
+        }
+    ],
+    "links": {
+        "first": "https://api.ibanity.com/ponto-connect/sandbox/financial-institutions/41ed5259-9e07-43a7-b8c2-3854adef2067/financial-institution-accounts/8e49fac4-7eb1-41d2-8c8c-30adc94c56fb/financial-institution-transactions?page[limit]=1",
+        "next": "https://api.ibanity.com/ponto-connect/sandbox/financial-institutions/41ed5259-9e07-43a7-b8c2-3854adef2067/financial-institution-accounts/8e49fac4-7eb1-41d2-8c8c-30adc94c56fb/financial-institution-transactions?page[after]=2468a217-d68d-4a57-8a94-5803ef5eb35e&page[limit]=1"
+    },
+    "meta": {
+        "paging": {
+            "after": "2468a217-d68d-4a57-8a94-5803ef5eb35e",
+            "limit": 1
+        }
+    }
+}

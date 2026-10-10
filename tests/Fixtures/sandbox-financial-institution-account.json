@@ -1,0 +1,21 @@
+{
+    "data": {
+        "attributes": {
+            "description": "Natus magnam aliquid.",
+            "reference": "FR634651777754ERBI0HJTW2U88",
+            "product": "Current account",
+            "currency": "EUR",
+            "currentBalance": -464.75,
+            "subtype": "checking",
+            "availableBalance": -464.75,
+            "referenceType": "IBAN",
+            "holderName": "Spencer Nikolaus",
+            "availableBalanceChangedAt": "2025-04-22T13:31:57.530551Z",
+            "availableBalanceReferenceDate": "2025-04-22T14:30:32Z",
+            "currentBalanceChangedAt": "2025-04-22T13:31:57.530540Z",
+            "currentBalanceReferenceDate": "2025-04-22T14:30:32Z"
+        },
+        "id": "8e49fac4-7eb1-41d2-8c8c-30adc94c56fb",
+        "type": "financialInstitutionAccount"
+    }
+}

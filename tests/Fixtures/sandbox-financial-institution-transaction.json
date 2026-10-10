@@ -1,0 +1,29 @@
+{
+    "data": {
+        "attributes": {
+            "description": "Big Cotton JACKET",
+            "currency": "EUR",
+            "mandateId": null,
+            "amount": -21.24,
+            "createdAt": "2025-04-22T13:30:32.145064Z",
+            "remittanceInformation": "BIGGER NEW JACKET",
+            "remittanceInformationType": "unstructured",
+            "endToEndId": null,
+            "updatedAt": "2025-04-22T13:30:53.902227Z",
+            "fee": null,
+            "additionalInformation": null,
+            "bankTransactionCode": null,
+            "cardReference": null,
+            "cardReferenceType": null,
+            "counterpartName": null,
+            "counterpartReference": "BE58732784160579",
+            "creditorId": null,
+            "executionDate": "2025-04-22T14:30:32Z",
+            "proprietaryBankTransactionCode": "12345",
+            "purposeCode": null,
+            "valueDate": "2025-04-21T13:30:32Z"
+        },
+        "id": "2468a217-d68d-4a57-8a94-5803ef5eb35e",
+        "type": "financialInstitutionTransaction"
+    }
+}
