@@ -5,6 +5,7 @@ namespace PontoConnect;
 use PontoConnect\Api\PontoConnectApiClient;
 use PontoConnect\Enums\Language;
 use PontoConnect\Enums\Scope;
+use PontoConnect\Webhooks\WebhookVerifier;
 use SensitiveParameter;
 
 /**
@@ -58,6 +59,11 @@ class PontoConnectManager
             language: $language,
             onboardingDetailsId: $onboardingDetailsId,
         );
+    }
+
+    public function webhookVerifier(): WebhookVerifier
+    {
+        return new WebhookVerifier($this->configuration->applicationId);
     }
 
     public function configuration(): Configuration

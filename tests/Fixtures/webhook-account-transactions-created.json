@@ -1,0 +1,30 @@
+{
+    "data": {
+        "attributes": {
+            "createdAt": "2021-11-05T10:53:36.284Z",
+            "count": 3
+        },
+        "id": "3c1e3b35-6bae-4102-b98b-986799cb9d1f",
+        "relationships": {
+            "account": {
+                "data": {
+                    "id": "a193e71b-ae2f-43c7-b408-6d465e55e81e",
+                    "type": "account"
+                }
+            },
+            "organization": {
+                "data": {
+                    "id": "11a67820-0712-4c93-90dc-5c0c897d07b8",
+                    "type": "organization"
+                }
+            },
+            "synchronization": {
+                "data": {
+                    "id": "1baa772f-efef-4419-b574-9892c8485482",
+                    "type": "synchronization"
+                }
+            }
+        },
+        "type": "pontoConnect.account.transactionsCreated"
+    }
+}

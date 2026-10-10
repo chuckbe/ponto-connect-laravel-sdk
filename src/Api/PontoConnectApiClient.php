@@ -15,6 +15,7 @@ use PontoConnect\Api\Resources\SynchronizationResource;
 use PontoConnect\Api\Resources\TransactionResource;
 use PontoConnect\Api\Resources\UsageResource;
 use PontoConnect\Api\Resources\UserInfoResource;
+use PontoConnect\Api\Resources\WebhookResource;
 use PontoConnect\Configuration;
 use PontoConnect\Exceptions\PontoConnectException;
 use Saloon\Http\Auth\TokenAuthenticator;
@@ -61,6 +62,8 @@ class PontoConnectApiClient extends Connector
 
     public SandboxResource $sandbox;
 
+    public WebhookResource $webhook;
+
     public function __construct(
         protected Configuration $configuration,
         #[SensitiveParameter]
@@ -79,6 +82,7 @@ class PontoConnectApiClient extends Connector
         $this->usage = new UsageResource($this);
         $this->integration = new IntegrationResource($this);
         $this->sandbox = new SandboxResource($this);
+        $this->webhook = new WebhookResource($this);
     }
 
     public function configuration(): Configuration

@@ -9,6 +9,7 @@ use PontoConnect\Enums\Environment;
 use PontoConnect\Facades\PontoConnect;
 use PontoConnect\PontoConnectManager;
 use PontoConnect\Tests\TestCase;
+use PontoConnect\Webhooks\WebhookVerifier;
 use Saloon\Http\Faking\MockClient;
 use Saloon\Http\Faking\MockResponse;
 
@@ -137,6 +138,11 @@ class PontoConnectManagerTest extends TestCase
 
         $this->assertStringStartsWith('https://authorization.myponto.com/oauth2/auth?client_id=client-id&', $url);
         $this->assertStringContainsString('scope=ai%20name%20offline_access', $url);
+    }
+
+    public function test_webhook_verifier_uses_the_application_id(): void
+    {
+        $this->assertInstanceOf(WebhookVerifier::class, PontoConnect::webhookVerifier());
     }
 
     public function test_manager_is_a_singleton(): void

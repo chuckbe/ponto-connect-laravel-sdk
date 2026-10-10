@@ -8,11 +8,13 @@ use PontoConnect\Configuration;
 use PontoConnect\Enums\Language;
 use PontoConnect\Enums\Scope;
 use PontoConnect\PontoConnectManager;
+use PontoConnect\Webhooks\WebhookVerifier;
 
 /**
  * @method static PontoConnectApiClient api(?string $accessToken = null)
  * @method static PontoConnectApiClient withAccessToken(string $accessToken)
  * @method static string authorizationUrl(string $redirectUri, string $state, string $codeChallenge, list<string|Scope>|null $scopes = null, Language|string|null $language = null, ?string $onboardingDetailsId = null)
+ * @method static WebhookVerifier webhookVerifier()
  * @method static Configuration configuration()
  *
  * @see PontoConnectManager
