@@ -1,0 +1,15 @@
+/vendor/
+/node_modules/
+/.idea/
+/.vscode/
+composer.lock
+.phpunit.result.cache
+.phpunit.cache/
+.php-cs-fixer.cache
+phpunit.xml
+coverage/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.env

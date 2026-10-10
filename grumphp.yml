@@ -1,0 +1,12 @@
+grumphp:
+    tasks:
+        phpcsfixer:
+            config: php-cs-fixer.php
+            allow_risky: true
+        phpstan:
+            configuration: phpstan.neon
+            level: 8
+            ignore_patterns:
+                - /^config\//
+        phpunit:
+            config_file: phpunit.xml.dist

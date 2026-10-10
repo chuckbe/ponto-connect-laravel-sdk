@@ -1,0 +1,67 @@
+{
+    "name": "chuckbe/ponto-connect-laravel-sdk",
+    "description": "Laravel SDK for the Ponto Connect API v2 (Isabel Group / Ibanity)",
+    "keywords": [
+        "laravel",
+        "ponto",
+        "ponto-connect",
+        "ibanity",
+        "isabel",
+        "sdk",
+        "psd2",
+        "open-banking",
+        "belgium"
+    ],
+    "homepage": "https://github.com/chuckbe/ponto-connect-laravel-sdk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Karel Brijs",
+            "email": "karel@chuck.be"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "firebase/php-jwt": "^6.11|^7.0",
+        "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+        "saloonphp/laravel-plugin": "^3.0",
+        "saloonphp/saloon": "^3.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "larastan/larastan": "^2.0|^3.0",
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpro/grumphp-shim": "^2.0",
+        "phpunit/phpunit": "^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PontoConnect\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PontoConnect\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PontoConnect\\PontoConnectServiceProvider"
+            ],
+            "aliases": {
+                "PontoConnect": "PontoConnect\\Facades\\PontoConnect"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpro/grumphp-shim": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
