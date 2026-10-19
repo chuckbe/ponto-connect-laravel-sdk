@@ -65,6 +65,25 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Request Signing (HTTP Signature)
+    |--------------------------------------------------------------------------
+    |
+    | Live applications sign every request with the signature certificate,
+    | next to mutual TLS. Create it in the developer portal, next to the
+    | TLS certificate; the certificate ID is shown there. Leave these empty
+    | in the sandbox: requests are then not signed. Keep the key outside of
+    | your repository and never commit it.
+    |
+    */
+
+    'signature_certificate_id' => env('PONTO_CONNECT_SIGNATURE_CERTIFICATE_ID'),
+
+    'signature_private_key_path' => env('PONTO_CONNECT_SIGNATURE_PRIVATE_KEY_PATH'),
+
+    'signature_private_key_passphrase' => env('PONTO_CONNECT_SIGNATURE_PRIVATE_KEY_PASSPHRASE'),
+
+    /*
+    |--------------------------------------------------------------------------
     | API URL
     |--------------------------------------------------------------------------
     */

@@ -43,6 +43,10 @@ final class Configuration
         public readonly string $apiUrl = self::DEFAULT_API_URL,
         public readonly int $timeout = self::DEFAULT_TIMEOUT,
         ?array $scopes = null,
+        public readonly ?string $signatureCertificateId = null,
+        public readonly ?string $signaturePrivateKeyPath = null,
+        #[SensitiveParameter]
+        public readonly ?string $signaturePrivateKeyPassphrase = null,
     ) {
         $this->applicationId = self::nullIfBlank($applicationId) ?? $clientId;
         $this->authorizationUrl = $environment->authorizationUrl();
@@ -64,6 +68,9 @@ final class Configuration
      *     api_url?: string|null,
      *     timeout?: int|string|null,
      *     scopes?: string|list<string>|null,
+     *     signature_certificate_id?: string|null,
+     *     signature_private_key_path?: string|null,
+     *     signature_private_key_passphrase?: string|null,
      * } $config
      */
     public static function fromArray(#[SensitiveParameter] array $config): self
@@ -99,7 +106,20 @@ final class Configuration
             apiUrl: self::nullIfBlank($config['api_url'] ?? null) ?? self::DEFAULT_API_URL,
             timeout: $timeout,
             scopes: $scopes,
+            signatureCertificateId: self::nullIfBlank($config['signature_certificate_id'] ?? null),
+            signaturePrivateKeyPath: self::nullIfBlank($config['signature_private_key_path'] ?? null),
+            signaturePrivateKeyPassphrase: self::nullIfBlank($config['signature_private_key_passphrase'] ?? null),
         );
+    }
+
+    /**
+     * Live requests are signed with the signature certificate (HTTP
+     * signature), next to mutual TLS. Off until both its ID and its
+     * private key are configured, as in the sandbox.
+     */
+    public function signsRequests(): bool
+    {
+        return $this->signatureCertificateId !== null && $this->signaturePrivateKeyPath !== null;
     }
 
     public function isSandbox(): bool
@@ -125,6 +145,9 @@ final class Configuration
             'authorizationUrl' => $this->authorizationUrl,
             'timeout' => $this->timeout,
             'scopes' => $this->scopes,
+            'signatureCertificateId' => $this->signatureCertificateId,
+            'signaturePrivateKeyPath' => $this->signaturePrivateKeyPath,
+            'signaturePrivateKeyPassphrase' => $this->signaturePrivateKeyPassphrase === null ? null : '********',
         ];
     }
 
