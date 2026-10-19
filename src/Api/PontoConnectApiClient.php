@@ -18,8 +18,11 @@ use PontoConnect\Api\Resources\UserInfoResource;
 use PontoConnect\Api\Resources\WebhookResource;
 use PontoConnect\Configuration;
 use PontoConnect\Exceptions\PontoConnectException;
+use PontoConnect\Support\HttpSignature;
+use Psr\Http\Message\RequestInterface;
 use Saloon\Http\Auth\TokenAuthenticator;
 use Saloon\Http\Connector;
+use Saloon\Http\PendingRequest;
 use Saloon\Http\Response;
 use Saloon\Traits\Plugins\AlwaysThrowOnErrors;
 use SensitiveParameter;
@@ -28,7 +31,8 @@ use Throwable;
 /**
  * Saloon connector for the Ponto Connect and Webhooks APIs.
  *
- * Every request is sent over mutual TLS with the application certificate.
+ * Every request is sent over mutual TLS with the application certificate,
+ * and signed with the signature certificate when one is configured (live).
  * Pass a customer (or client) access token to call the endpoints that
  * require a Bearer token; the token endpoints use Basic auth instead.
  */
@@ -64,6 +68,8 @@ class PontoConnectApiClient extends Connector
 
     public WebhookResource $webhook;
 
+    private ?HttpSignature $httpSignature = null;
+
     public function __construct(
         protected Configuration $configuration,
         #[SensitiveParameter]
@@ -88,6 +94,22 @@ class PontoConnectApiClient extends Connector
     public function configuration(): Configuration
     {
         return $this->configuration;
+    }
+
+    /**
+     * Signs the request exactly as it goes out (HTTP signature) once the
+     * signature certificate is configured, as live requires. The sandbox
+     * sends it unsigned.
+     */
+    public function handlePsrRequest(RequestInterface $request, PendingRequest $pendingRequest): RequestInterface
+    {
+        if (! $this->configuration->signsRequests()) {
+            return $request;
+        }
+
+        $this->httpSignature ??= HttpSignature::fromConfiguration($this->configuration);
+
+        return $this->httpSignature->sign($request);
     }
 
     public function resolveBaseUrl(): string

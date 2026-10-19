@@ -33,6 +33,9 @@ PONTO_CONNECT_CERTIFICATE_PATH=/home/forge/.ponto/certificate.pem
 PONTO_CONNECT_PRIVATE_KEY_PATH=/home/forge/.ponto/private_key.pem
 PONTO_CONNECT_PRIVATE_KEY_PASSPHRASE=your-key-passphrase
 PONTO_CONNECT_CA_CHAIN_PATH=
+PONTO_CONNECT_SIGNATURE_CERTIFICATE_ID=
+PONTO_CONNECT_SIGNATURE_PRIVATE_KEY_PATH=
+PONTO_CONNECT_SIGNATURE_PRIVATE_KEY_PASSPHRASE=
 PONTO_CONNECT_API_URL=https://api.ibanity.com
 PONTO_CONNECT_SCOPES="ai pi name offline_access"
 PONTO_CONNECT_TIMEOUT=30
@@ -45,13 +48,14 @@ PONTO_CONNECT_TIMEOUT=30
 | `PONTO_CONNECT_APPLICATION_ID` | The application id, used as the expected `aud` of webhook signatures. Defaults to the client id. |
 | `PONTO_CONNECT_CERTIFICATE_PATH` / `_PRIVATE_KEY_PATH` / `_PRIVATE_KEY_PASSPHRASE` | The TLS certificate and private key for mutual TLS. Every API request uses them. |
 | `PONTO_CONNECT_CA_CHAIN_PATH` | Optional CA chain to verify the API server. Uses the system CA bundle when empty. |
+| `PONTO_CONNECT_SIGNATURE_CERTIFICATE_ID` / `_SIGNATURE_PRIVATE_KEY_PATH` / `_SIGNATURE_PRIVATE_KEY_PASSPHRASE` | The signature certificate for live applications: its ID (shown in the developer portal) and its private key. When both the ID and the key are set, every request is signed (HTTP signature). Leave them empty in the sandbox. |
 | `PONTO_CONNECT_SCOPES` | Scopes requested in the authorization URL, separated by spaces or commas. Default `ai pi name offline_access`. Drop `pi` if your application may not initiate payments. |
 
 ### Certificates
 
 Keep the certificate and private key **outside the repository** and outside `public/`: for example `~/.config/chuck/ponto-sandbox/` locally, and a directory owned by the deploy user on the server, provisioned by your server recipes. Never commit them. Restrict the private key's permissions (`chmod 600`).
 
-The sandbox and live environments use different certificates and client credentials. "Going live" means swapping these values, not changing code.
+The sandbox and live environments use different certificates and client credentials. A live application also has a **signature certificate** next to the TLS certificate: create it in the developer portal and set the `PONTO_CONNECT_SIGNATURE_*` values. "Going live" means swapping and adding these values, not changing code.
 
 ## Usage
 
@@ -331,7 +335,7 @@ try {
 - **Secrets**: the client secret, passphrase, access and refresh tokens are marked `#[SensitiveParameter]`. `Configuration` and `Token` hide them from `print_r`/`var_dump`. Do not log `Token::toArray()`. Store refresh tokens encrypted.
 - **Webhooks**: always verify the signature against the raw body before using the payload. Store the `jti` to reject replays. Keep the event handler idempotent, because Ponto retries and does not guarantee order.
 - **Synchronizations**: never send a fake or server IP address. Creating synchronizations without the customer present breaks the Ponto Connect terms (PSD2 RTS).
-- **HTTP signatures** are required by Ponto only for payment requests of live applications, which this SDK does not implement yet.
+- **HTTP signatures**: live applications sign every request with the signature certificate, next to mutual TLS. Once the signature certificate is configured, the connector adds a `Digest` header (SHA-512 of the body) and a `Signature` header (`hs2019`, RSA-PSS with SHA-256). The signature covers the request target, host, digest, creation time, `Authorization` and every `Ibanity-*` header, as Ibanity's own SDKs do (`PontoConnect\Support\HttpSignature`). The sandbox sends requests unsigned.
 
 ## API reference
 
