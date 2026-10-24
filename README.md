@@ -7,7 +7,8 @@ Payment initiation endpoints (payments, bulk payments, payment requests and thei
 ## Requirements
 
 - PHP 8.2+
-- Laravel 10, 11, 12 or 13
+- Laravel 11, 12 or 13
+- Saloon 4 (`saloonphp/saloon` ^4.0)
 - A Ponto Connect application in the [Isabel API Hub developer portal](https://documentation.ibanity.com/getting-started), with its TLS certificate
 
 ## Installation
